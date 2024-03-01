@@ -16,6 +16,6 @@ class Solution:
                 if target < nums[mid] or target > nums[r]:
                     r = mid - 1
                 else:
-                    l = mid + 1
+                    l = mid + 1 
             
         return -1
