@@ -12,9 +12,8 @@ class Solution:
             fast = fast.next.next
         
         second = slow.next
-        slow.next = None
+        prev = slow.next = None
         
-        prev = None
         while second:
             tmp = second.next
             second.next = prev
