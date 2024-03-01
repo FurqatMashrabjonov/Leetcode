@@ -27,6 +27,4 @@ class Solution:
             tmp1, tmp2 = first.next, second.next
             first.next = second
             second.next = tmp1
-            first = tmp1
-            second = tmp2
-        
+            first, second = tmp1, tmp2        
