@@ -21,7 +21,7 @@ class Solution:
                 cur.val = reversed_arr[i]
                 i += 1
             else:
-                cur.val = arr[j]
+                cur.val = arr[j] 
                 j+=1
             from_arr = not from_arr
             cur = cur.next    
