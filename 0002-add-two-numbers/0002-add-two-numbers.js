@@ -31,6 +31,7 @@ var addTwoNumbers = function(l1, l2) {
         }else {
             tmp = 0
         }
+        
        if (l1 || l2){
         res.next = new ListNode()
         res = res.next
