@@ -23,6 +23,6 @@ class Solution:
             else:
                 cur.val = arr[j] 
                 j+=1
-            from_arr = not from_arr
+            from_arr = not from_arr 
             cur = cur.next    
         
