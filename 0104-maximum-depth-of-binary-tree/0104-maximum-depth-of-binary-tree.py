@@ -9,7 +9,6 @@ class Solution:
         def dfs(root, n):
             if root == None:
                 return n
-            
             return max(dfs(root.left, n + 1), dfs(root.right, n + 1))
-            
+        
         return dfs(root, 0)
