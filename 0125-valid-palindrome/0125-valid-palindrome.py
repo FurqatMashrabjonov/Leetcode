@@ -7,7 +7,6 @@ class Solution:
                 str += char
         
         n = len(str)
-        print(str)
         for i in range(n // 2):
             if str[i] != str[n - i - 1]:
                 return False
