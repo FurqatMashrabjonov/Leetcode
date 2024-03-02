@@ -8,6 +8,4 @@ class Solution:
             curSum += num
             maxSum = max(curSum, maxSum)
         
-        
-        
         return maxSum
