@@ -16,6 +16,4 @@ class Solution:
             else:
                 stack.append(int(token))
         
-        
-        
         return stack[0]
