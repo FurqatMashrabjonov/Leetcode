@@ -7,7 +7,6 @@ class Solution:
             while s[r] in window:
                 window.remove(s[l])
                 l += 1
-        
             maxLen = max(maxLen, r - l + 1)
             window.add(s[r])    
             
