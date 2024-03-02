@@ -9,12 +9,9 @@ class Solution:
             if i > 0 and nums[i] == nums[i - 1]:
                 continue
                 
-            l = i + 1
-            r = n - 1
-            
+            l, r = i + 1, n - 1            
             while l < r : 
                 summ = nums[i] + nums[l] + nums[r]
-                
                 if summ > 0:
                     r -= 1
                 elif summ < 0: 
