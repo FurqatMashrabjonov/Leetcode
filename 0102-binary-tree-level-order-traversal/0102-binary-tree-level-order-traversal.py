@@ -7,13 +7,10 @@
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         res = []
-        
         def bfs(root):
             if root == None:
-                return
-            
+                return 
             queue = [root]
-            
             while len(queue) > 0:
                 tmp = []
                 for i in range(len(queue)):
