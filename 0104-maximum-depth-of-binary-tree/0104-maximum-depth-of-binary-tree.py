@@ -17,7 +17,6 @@ class Solution:
             n = len(queue)
             for i in range(n):
                 cur = queue.pop(0)
-                
                 if cur.left:
                     queue.append(cur.left)
                 if cur.right:
