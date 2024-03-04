@@ -23,5 +23,4 @@ class Solution:
                 if cur.right:
                     queue.append(cur.right)
             
-            
         return level
