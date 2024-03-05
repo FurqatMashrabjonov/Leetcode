@@ -12,7 +12,6 @@ class Solution:
         if self.isSame(root, subRoot): return True
         return self.isSubtree(root.left, subRoot) or self.isSubtree(root.right, subRoot)
     
-    
     def isSame(self, s, t):
             if not s and not t: return True
             if s and t and s.val == t.val: return self.isSame(s.left, t.left) and self.isSame(s.right, t.right)
