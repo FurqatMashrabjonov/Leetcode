@@ -8,7 +8,8 @@ class Solution:
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
         minval, maxval = -1 * 2**31 - 1, 2**31
         return self.isValid(root, minval, maxval)
-        
+    
+    
     def isValid(self, root, minval, maxval):
         if not root:
             return True
