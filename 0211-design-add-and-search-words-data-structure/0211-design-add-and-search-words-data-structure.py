@@ -3,7 +3,6 @@ class TrieNode:
         self.children = {}
         self.word = False
 
-
 class WordDictionary:
 
     def __init__(self):
@@ -20,7 +19,6 @@ class WordDictionary:
     def search(self, word: str) -> bool:
         def dfs(j, root):
             cur = root
-            
             for i in range(j, len(word)):
                 c = word[i]
                 if c == '.':
