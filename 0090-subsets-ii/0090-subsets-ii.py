@@ -9,11 +9,12 @@ class Solution:
         if i >= len(nums):
             subsets.append(curSet.copy())
             return
-        
+        #include nums[i]
         curSet.append(nums[i])
         self.helper(i + 1, nums, subsets, curSet)
         curSet.pop()
         
+        #dont include nums[i]
         while i + 1 < len(nums) and nums[i] == nums[i + 1]:
             i += 1
             
