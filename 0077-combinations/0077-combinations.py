@@ -12,10 +12,7 @@ class Solution:
         if i > n:
             return
         
-        curCombs.append(i)
-        self.helper(i + 1, curCombs, combs, n, k)
-        curCombs.pop()
-        
-        #dont include i
-        self.helper(i + 1, curCombs, combs, n, k)
-        
+        for j in range(i, n + 1):
+            curCombs.append(j)
+            self.helper(j + 1, curCombs, combs, n, k)
+            curCombs.pop()
