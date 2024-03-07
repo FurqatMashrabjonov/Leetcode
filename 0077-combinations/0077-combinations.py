@@ -4,7 +4,6 @@ class Solution:
         self.helper(1, [], combs, n, k)
         return combs
     
-    
     def helper(self, i, curCombs, combs, n, k):
         if len(curCombs) == k:
             combs.append(curCombs.copy())
@@ -16,6 +15,7 @@ class Solution:
         curCombs.append(i)
         self.helper(i + 1, curCombs, combs, n, k)
         curCombs.pop()
+        
         
         self.helper(i + 1, curCombs, combs, n, k)
         
