@@ -4,7 +4,6 @@ class Solution:
         self.helper(0, nums, subsets, curSet)
         return subsets
     
-    
     def helper(self, i, nums, subsets, curSet):
         if i >= len(nums):
             subsets.append(curSet.copy())
