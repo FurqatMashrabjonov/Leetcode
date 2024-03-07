@@ -16,6 +16,6 @@ class Solution:
         self.helper(i + 1, curCombs, combs, n, k)
         curCombs.pop()
         
-        
+        #dont include i
         self.helper(i + 1, curCombs, combs, n, k)
         
