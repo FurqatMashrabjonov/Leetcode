@@ -9,10 +9,9 @@ class Solution:
         if i >= len(nums):
             subsets.append(curSet.copy())
             return
-        
+        #include nums[i]
         curSet.append(nums[i])
         self.helper(i + 1, nums, subsets, curSet)
         curSet.pop()
-        
-        
+        #not include nums[i]
         self.helper(i + 1, nums, subsets,curSet)
