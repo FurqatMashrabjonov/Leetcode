@@ -9,14 +9,15 @@ class Solution:
         if not root: return False
         if not subRoot: return True
         
-        if self.isSame(root, subRoot): return True
+        if self.isSame(root, subRoot):
+            return True
+        
         return self.isSubtree(root.left, subRoot) or self.isSubtree(root.right, subRoot)
-    
-    def isSame(self, s, t):
-            if not s and not t: return True
-            if s and t and s.val == t.val: return self.isSame(s.left, t.left) and self.isSame(s.right, t.right)
-            return False
         
-        
-    
+    def isSame(self, p, q):
+        if not p and not q:
+            return True
+       
+        if p and q and p.val == q.val: return self.isSame(p.left, q.left) and self.isSame(p.right, q.right)
+        return False
         
