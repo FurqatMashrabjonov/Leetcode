@@ -1,16 +1,18 @@
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
-        subsets, curSet = [], []
-        self.helper(0, nums, subsets, curSet)
+        subsets = []
+        
+        def helper(i, curSet, subsets):
+            if i >= len(nums):
+                subsets.append(curSet.copy())
+                return
+        
+            curSet.append(nums[i])
+            helper(i + 1, curSet, subsets)
+            curSet.pop()
+
+            helper(i + 1, curSet, subsets)
+
+        helper(0, [], subsets)
+        
         return subsets
-    
-    def helper(self, i, nums, subsets, curSet):
-        if i >= len(nums):
-            subsets.append(curSet.copy())
-            return
-        #include nums[i]
-        curSet.append(nums[i])
-        self.helper(i + 1, nums, subsets, curSet)
-        curSet.pop()
-        #not include nums[i]
-        self.helper(i + 1, nums, subsets,curSet)
