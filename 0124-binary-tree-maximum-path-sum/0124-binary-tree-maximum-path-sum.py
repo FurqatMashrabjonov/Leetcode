@@ -22,7 +22,6 @@ class Solution:
                 self.maxPath,
                 root.val + leftMax + rightMax,
             )
-            
             return root.val + max(leftMax, rightMax)
         find(root)
         return self.maxPath
