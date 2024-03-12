@@ -9,10 +9,8 @@ class Solution:
                 continue
             
             l, r = i + 1, len(nums) - 1
-            
             while l < r:
                 curSum = nums[i] + nums[l] + nums[r]
-                
                 if curSum > 0:
                     r -= 1
                 elif curSum < 0:
