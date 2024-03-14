@@ -16,9 +16,9 @@ class Solution:
         
 #         return subsets
 
-
-        subsets = []
-        subsets.append([])
+        #Breadth First Search
+        subsets = [[]]
+        
         for currentNumber in nums:
             n = len(subsets)
             for i in range(n):
