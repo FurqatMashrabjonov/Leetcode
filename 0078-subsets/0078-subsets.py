@@ -6,7 +6,6 @@ class Solution:
             if i >= len(nums):
                 subsets.append(curSet.copy())
                 return
-        
             curSet.append(nums[i])
             helper(i + 1, curSet, subsets)
             curSet.pop()
