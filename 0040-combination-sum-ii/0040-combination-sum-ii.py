@@ -20,10 +20,8 @@ class Solution:
             while i + 1< len(candidates) and candidates[i] == candidates[i + 1]:
                 i += 1
                 
-            
             helper(i + 1, comb, combs)
             
-        
         helper(0, [], combs)
         
         return combs
