@@ -7,10 +7,9 @@ class Solution:
                 appeared[num] += 1
             else: 
                 appeared[num] = 1
-                
-                
-        for num in appeared.values():
-            if num > 1:
-                return True
             
+            if appeared[num]  > 1:
+                return True
+                
+                
         return False
