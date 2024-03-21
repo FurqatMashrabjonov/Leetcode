@@ -3,13 +3,13 @@ class Solution:
         combs = []
         
         def helper(i, comb, combs):
-            cursum = sum(comb)
-            if cursum == target:
+            curSum = sum(comb)
+            if curSum == target:
                 combs.append(comb.copy())
-                return
+                return None
             
-            if cursum > target or i >= len(candidates):
-                return
+            if i >= len(candidates) or curSum > target:
+                return None
             
             comb.append(candidates[i])
             helper(i, comb, combs)
@@ -20,3 +20,4 @@ class Solution:
         helper(0, [], combs)
         
         return combs
+    
