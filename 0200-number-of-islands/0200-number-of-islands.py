@@ -18,11 +18,6 @@ class Solution:
             dfs(r, c-1)
             dfs(r+1, c)
             dfs(r-1, c)
-            
-            
-            return True
-            
-        
         
         islands = 0
         for r in range(ROWS):
