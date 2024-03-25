@@ -15,14 +15,13 @@ class Solution:
         
         while len(queue):
             n = len(queue)
-            tmp = []
+            res.append(queue[-1].val)
             for i in range(n):
                 cur = queue.pop(0)
-                tmp.append(cur.val)
+
                 if cur.left:
                     queue.append(cur.left)
                 if cur.right:
                     queue.append(cur.right)
-            res.append(tmp[-1])
-        
+         
         return res
