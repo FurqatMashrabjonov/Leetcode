@@ -9,7 +9,6 @@ class Solution:
             r, c, length = q.popleft()
             if (min(r, c) < 0 or max(r, c) >= N or grid[r][c]):
                 continue
-            
             if r == N - 1 and c == N - 1:
                 return length
             
