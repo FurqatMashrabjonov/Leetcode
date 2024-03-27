@@ -21,9 +21,6 @@ class Solution:
             for dr, dc in directs:
                 dfs(r + dr, c + dc)
             
-            
-        
-        
         for r in range(ROWS):
             for c in range(COLS):
                 if grid[r][c] == 1:
