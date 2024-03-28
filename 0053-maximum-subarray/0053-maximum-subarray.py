@@ -1,14 +1,11 @@
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
-        #kadanes algorithm
-        
-        maxSum, curSum = nums[0], 0
+        maxSum = nums[0]
+        curSum = 0
         
         for num in nums:
-            curSum = max(curSum, 0)
+            curSum = max(0, curSum)
             curSum += num
-            maxSum = max(maxSum, curSum)
-            
+            maxSum = max(curSum, maxSum)
+        
         return maxSum
-        
-        
