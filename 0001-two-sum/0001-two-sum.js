@@ -12,6 +12,4 @@ var twoSum = function(nums, target) {
         else 
             obj[target - nums[i]] = i
     }
-    
-    
 };
