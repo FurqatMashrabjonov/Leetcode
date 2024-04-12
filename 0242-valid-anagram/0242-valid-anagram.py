@@ -3,17 +3,24 @@ class Solution:
         if len(s) != len(t):
             return False
         
-        listS, listT = {}, {}
+        visited = {}
         
-        for i in range(len(s)):
-            listS[s[i]] = 1 + listS.get(s[i], 0)
-            listT[t[i]] = 1 + listT.get(t[i], 0)
+        for c in s:
+            if c not in visited:
+                visited[c] = 1
+                continue
+                
+            visited[c] += 1
         
         
-        for key in listS.keys():
-            if listS.get(key, 0) != listT.get(key, 0):
+        for c in t:
+            if c not in visited:
                 return False
             
+            visited[c] -= 1
+            
+            if visited[c] < 0:
+                return False
+        
         
         return True
-        
