@@ -4,10 +4,12 @@ class Solution:
         
         l, r = 0, 0
         
-        for r in range(len(prices)):
+        while r < len(prices):
             profit = max(profit, prices[r] - prices[l])
             
             if prices[r] < prices[l]:
                 l = r
+            
+            r += 1
         
         return profit
