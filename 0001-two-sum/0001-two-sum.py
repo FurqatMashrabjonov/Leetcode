@@ -8,4 +8,3 @@ class Solution:
                 return [obj[nums[i]], i]
             
             obj[target - nums[i]] = i
-            
