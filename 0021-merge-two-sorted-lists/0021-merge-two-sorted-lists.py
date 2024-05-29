@@ -14,8 +14,10 @@ class Solution:
             else:
                 cur.next = list1
                 list1 = list1.next
-            cur = cur.next
             
+            cur = cur.next
+        
         cur.next = list1 if list1 else list2
         
         return dummy.next
+        
