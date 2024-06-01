@@ -1,14 +1,14 @@
 class Solution:
     def missingNumber(self, nums: List[int]) -> int:
-        nums.sort()
-        found = -1
-        for i in range(len(nums)):
-            if nums[i] != i:
-                found = i
-                break
+        n = len(nums)
+        p_sum = int(((1 + n) * n) / 2)
         
-        if found == -1:
-            found = len(nums)
-            
-        return found
+        summa = 0
+        for num in nums:
+            summa += num
+        
+        
+        
+        return p_sum - summa
+        
         
