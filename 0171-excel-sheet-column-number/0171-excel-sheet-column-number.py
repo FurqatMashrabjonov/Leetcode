@@ -1,10 +1,10 @@
 class Solution:
-    def getPositionNumber(self, c):
+    def getPos(self, c):
         return ord(c) - 64
     
-    def titleToNumber(self, columnTitle: str) -> int:
+    def titleToNumber(self, col: str) -> int:
         res = 0
-        for i in range(len(columnTitle)):
-            res += self.getPositionNumber(columnTitle[i]) * pow(26, len(columnTitle) - i - 1)
+        for i in range(len(col)):
+            res += self.getPos(col[i]) * pow(26, len(col) - i - 1)
         
         return res
