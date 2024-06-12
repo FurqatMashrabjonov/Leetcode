@@ -1,10 +1,8 @@
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
-        obj = {}
+        result = 0
         
         for num in nums:
-            obj[num] = 1 + obj.get(num, 0)
+            result ^= num
         
-        for item in obj:
-            if obj[item] != 2:
-                return item
+        return result
