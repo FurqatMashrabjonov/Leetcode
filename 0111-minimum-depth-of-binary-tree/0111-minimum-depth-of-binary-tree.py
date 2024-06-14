@@ -9,17 +9,20 @@ class Solution:
         if not root:
             return 0
         
-        level = [float('inf')]
-        def dfs (root, l):
+        res = [float('inf')]
+        
+        def dfs(root, level):
             if not root:
                 return
             if not root.left and not root.right:
-                level[0] = min(level[0], l)
+                res[0] = min(res[0], level)
             
-            l += 1
+            level += 1
             
-            dfs(root.left, l)
-            dfs(root.right, l)
+            dfs(root.left, level)
+            dfs(root.right, level)
         
         dfs(root, 1)
-        return level[0]
+        return res[0]
+            
+            
