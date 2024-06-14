@@ -1,18 +1,8 @@
 class Solution:
     def countBits(self, n: int) -> List[int]:
-        ans = []
-        cache = {}
-        for num in range(n + 1):  
-            count = 0
-            while num > 0:
-                if num in cache:
-                    count += cache[num]
-                    break
-                if num & 1 == 1:
-                    count += 1
-                num >>= 1
-            ans.append(count)
-            cache[num] = count
+        res = [0] * (n + 1)
+
+        for i in range(n + 1):  
+            res[i] = res[i >> 1] + (i & 1)
         
-        
-        return ans
+        return res
